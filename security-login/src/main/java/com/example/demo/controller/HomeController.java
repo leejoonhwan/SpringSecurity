@@ -27,4 +27,12 @@ public class HomeController {
         Home home = homeMapper.readHome(name);
         return home;
     }
+
+    @RequestMapping("/insert/{name}/{password}/{username}")
+    public boolean insert(@PathVariable String name, String password, String username) {
+        System.out.println(name);
+        System.out.println(password);
+        System.out.println(username);
+        return true;
+    }
 }

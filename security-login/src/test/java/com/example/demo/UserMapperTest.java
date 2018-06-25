@@ -5,9 +5,11 @@ import com.example.demo.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -27,6 +29,10 @@ public class UserMapperTest {
 
     @Test
     public void readAuthorityTest() {
-        List<String> authorities = userMapper.readAuthority("cusonar");
+        List<GrantedAuthority> authorities = userMapper.readAuthority("cusonar");
+        Iterator<GrantedAuthority> it = authorities.iterator();
+        while (it.hasNext()) {
+            GrantedAuthority authority = it.next();
+        }
     }
 }
