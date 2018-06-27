@@ -1,6 +1,6 @@
 package com.example.demo.mapper;
 
-import com.example.demo.model.User;
+import com.example.demo.dto.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.security.core.GrantedAuthority;
 

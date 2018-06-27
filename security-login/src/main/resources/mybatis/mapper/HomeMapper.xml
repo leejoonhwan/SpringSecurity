@@ -2,7 +2,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.HomeMapper">
 
-    <select id="readHome" parameterType="String" resultType="Home">
+    <select id="readHome" parameterType="String" resultType="com.example.demo.dto.model.Home">
       SELECT * FROM hometest WHERE name = #{name}
     </select>
 </mapper>

@@ -1,7 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.mapper.UserMapper;
-import com.example.demo.model.User;
+import com.example.demo.dto.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
