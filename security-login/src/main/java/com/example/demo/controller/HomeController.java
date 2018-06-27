@@ -17,7 +17,7 @@ public class HomeController {
     @Autowired
     HomeMapper homeMapper;
 
-    @RequestMapping("/")
+    @RequestMapping("/login")
     public String home() {
         return "Hello World!";
     }
@@ -28,11 +28,22 @@ public class HomeController {
         return home;
     }
 
-    @RequestMapping("/insert/{name}/{password}/{username}")
-    public boolean insert(@PathVariable String name, String password, String username) {
-        System.out.println(name);
-        System.out.println(password);
-        System.out.println(username);
-        return true;
+    @RequestMapping("/admin")
+    public String admin() {
+        return "This is admin page";
+    }
+
+    @RequestMapping("/user")
+    public String user() {
+        return "this is user page";
+    }
+
+    @RequestMapping("/all")
+    public String all() {
+        return "Allow access page";
+    }
+    @RequestMapping("/picaso")
+    public String picaso() {
+        return "picaso all allow";
     }
 }

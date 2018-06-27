@@ -27,9 +27,6 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
     private PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 
-    public UserServiceImpl() {
-    }
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userMapper.readUser(username);

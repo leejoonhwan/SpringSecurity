@@ -3,8 +3,8 @@
 <mapper namespace="com.example.demo.mapper.UserMapper">
 
     <select id="readUser" parameterType="String" resultType="User">
- SELECT * FROM usertest WHERE username = #{username}
-</select>
+      SELECT * FROM usertest WHERE username = #{username}
+    </select>
 
 
     <select id="readAuthority" parameterType="String" resultType="org.springframework.security.core.authority.SimpleGrantedAuthority">
@@ -13,8 +13,8 @@
 
 
     <insert id="createUser" parameterType="User">
- INSERT INTO usertest (username, password, name, isAccountNonExpired, isAccountNonLocked, isCredentialsNonExpired, isEnabled) VALUES (#{username}, #{password}, #{name}, #{isAccountNonExpired}, #{isAccountNonLocked}, #{isCredentialsNonExpired}, #{isEnabled})
-</insert>
+     INSERT INTO usertest (username, password, name, isAccountNonExpired, isAccountNonLocked, isCredentialsNonExpired, isEnabled) VALUES (#{username}, #{password}, #{name}, #{isAccountNonExpired}, #{isAccountNonLocked}, #{isCredentialsNonExpired}, #{isEnabled})
+    </insert>
 
 
     <insert id="createAuthority" parameterType="org.springframework.security.core.GrantedAuthority">
